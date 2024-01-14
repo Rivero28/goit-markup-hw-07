@@ -215,8 +215,7 @@ button {
 }
 /*end of Section I, start: Section II*/
 .section-characteristics {
-  padding-bottom: 24px;
-  padding-right: 24px;
+  padding: 96px 24px;
 }
 .visually-hidden {
   position: absolute;
@@ -232,20 +231,22 @@ button {
 }
 .characteristics-list {
   display: flex;
+  flex-direction: column;
+  gap: 72px;
   justify-content: center;
-  align-content: center;
-  gap: 24px;
+  align-items: center;
 }
 .characteristics-list-item {
-  flex-basis: calc((100% - 72px) / 4);
+  flex-direction: column;
 }
 .characteristics-list-item-header {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+  text-align: center;
 }
 .characteristics-list-item-description {
   font-size: 16px;
@@ -254,19 +255,13 @@ button {
   color: #434455;
 }
 .icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 112px;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  display: none;
 }
 /*end of Section II, start: Section III*/
 .secondary-list-section {
   padding-top: 0;
   padding-bottom: 120px;
+  display: none;
 }
 .secondary-list-header {
   font-size: 36px;
@@ -295,10 +290,10 @@ button {
   justify-content: center;
   align-items: center;
   gap: 24px;
+  flex-direction: column;
 }
 .main-list-element {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
@@ -353,6 +348,7 @@ button {
 /*end of Section IV, start: Section V*/
 .customers-section {
   gap: 16px;
+  width: auto;
 }
 .customers-section > .container {
   display: flex;
@@ -360,12 +356,15 @@ button {
 }
 .customers-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 24px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 350px;
 }
 .customers-list-item {
-  width: calc((100% - 120px) / 6);
+  width: calc((100%-16px) / 2);
   height: 88px;
 }
 .customers-list-link {
@@ -395,13 +394,13 @@ button {
 }
 .footer > .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
 }
 .footer-secondary {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
 }
 .footer-logo {
   margin-top: 0px;
@@ -455,6 +454,13 @@ button {
 }
 .icon {
   fill: #f4f4fd;
+}
+.subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 .subscription-text {
   margin-bottom: 16px;
@@ -935,6 +941,7 @@ button {
   }
   .characteristics-list-item {
     align-items: flex-start;
+    flex-basis: calc((100% - 72px) / 4);
   }
   .characteristics-list-item-header {
     padding: 0 0 0 24px;
@@ -1001,4 +1008,52 @@ button {
 }
 /*========DESKTOP=======*/
 @media screen and (min-width: 1158px) {
+  .characteristics-list {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 24px;
+  }
+  .characteristics-list-item-header {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .main-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .main-list-element {
+    width: calc((100% - 72px) / 4);
+  }
+  .customers-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .customers-list-item {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+  }
+  .footer > .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
