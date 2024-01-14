@@ -710,7 +710,10 @@ button {
   z-index: 999;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
-  background-color: #3f51b5;
+  background-color: #ffffff;
+}
+.menu-container.is-open {
+  transform: translateX(0);
 }
 .close-button {
   position: absolute;
@@ -740,6 +743,19 @@ button {
   padding-top: 24px;
   padding-left: 8px;
   margin-bottom: 150px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+.mobile-menu-li {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  padding: 24px 0;
+  color: #2e2f42;
+}
+.mobile-menu-li.active-page {
+  color: #404bbf;
 }
 .menu-address-list {
   flex-wrap: wrap;
@@ -754,14 +770,21 @@ button {
   min-width: 353px;
   font-style: normal;
   padding-bottom: 40px;
+  color: #4d5ae5;
+}
+.address-mail {
+  font-size: 20px;
+  font-weight: 500;
+  min-width: 192px;
+  padding-bottom: 48px;
+  color: #434455;
 }
 .menu-social-list {
   gap: 56px;
-  justify-content: flex-start;
   display: flex;
+  justify-content: flex-start;
   list-style: none;
 }
-
 .mobile-menu-container .active-page::after {
   display: none;
 }
@@ -776,8 +799,43 @@ button {
   width: 100%;
 }
 .active-page {
-  color: var(--Pressed-state);
   position: relative;
+}
+.social-media-link-modal {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button-js {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button-js:focus,
+.modal-button-js:hover {
+  background-color: #404bbf;
+  border: none;
+  fill: #ffffff;
+}
+.menu-toggle-js {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }
 /*PORTFOLIO*/
 .button-list {
