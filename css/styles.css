@@ -12,7 +12,6 @@ body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
-  overflow-x: hidden;
 }
 
 .header {
@@ -839,6 +838,18 @@ button {
   height: 24px;
   cursor: pointer;
 }
+/*responsive picture*/
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .background-image {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/officex2.jpg");
+  }
+}
 /*PORTFOLIO*/
 .button-list {
   display: flex;
@@ -1103,6 +1114,18 @@ button {
   .modal-window {
     min-width: 408px;
   }
+  /*responsive picture*/
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .background-image {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/officex2.jpg");
+    }
+  }
 }
 /*========DESKTOP=======*/
 @media screen and (min-width: 1158px) {
@@ -1323,5 +1346,17 @@ button {
   }
   .main-list-element {
     width: calc((100% - 72px) / 4);
+  }
+  /*responsive picture*/
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .background-image {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/officex2.jpg");
+    }
   }
 }
