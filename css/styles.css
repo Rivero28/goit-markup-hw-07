@@ -1230,36 +1230,44 @@ button {
     flex-direction: row;
     align-items: flex-start;
   }
+  .footer .logo {
+    margin-left: 0px;
+  }
   .footer-secondary {
     flex-wrap: nowrap;
     margin-left: 108px;
     justify-content: space-between;
   }
   .footer-link {
-    text-align: left;
+    display: inline-block;
+    margin-bottom: 16px;
   }
   .footer-header {
     text-align: left;
+    margin-left: 0px;
+  }
+  .footer-description {
+    width: 264px;
   }
   .subscription {
     display: flex;
-    margin-right: 207px;
-    height: 80px;
-    min-width: 453px;
-    flex-direction: row;
+    max-height: 80px;
+    align-items: flex-start;
+    max-width: 453px;
+    flex-wrap: wrap;
   }
   .subscription-form {
     display: flex;
-    flex-wrap: nowrap;
     gap: 24px;
   }
   .subscription-input {
     width: 264px;
     color: #ffffff;
   }
-  .social-media-box {
-    margin-right: 164px;
-    margin-left: 0;
+  .sub-button {
+    display: flex;
+    margin-left: 24px;
+    margin-top: 40px;
   }
   .main-list {
     flex-direction: row;
