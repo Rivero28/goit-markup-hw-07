@@ -364,7 +364,7 @@ button {
   height: 350px;
 }
 .customers-list-item {
-  width: calc((100%-16px) / 2);
+  min-width: calc((100% - 16px) / 2);
   height: 88px;
 }
 .customers-list-link {
@@ -392,23 +392,21 @@ button {
   background-color: #2e2f42;
   padding: 100px 0;
 }
-.footer > .container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 .footer-secondary {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  align-content: center;
+  gap: 72px;
 }
 .footer-logo {
   margin-top: 0px;
-  margin-left: 106px;
 }
 .footer-link {
   display: inline-block;
   margin-bottom: 16px;
+  margin-left: 75.12px;
 }
 .logo-secondary-footer {
   color: #f4f4fd;
@@ -429,6 +427,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  margin-left: 56px;
 }
 .icon-list-footer {
   display: flex;
@@ -471,11 +470,10 @@ button {
   color: #ffffff;
 }
 .subscription-form {
-  display: flex;
   gap: 24px;
 }
 .subscription-input {
-  width: 264px;
+  width: 398px;
   height: 40px;
   border: 1px solid #ffffff;
   background-color: transparent;
@@ -486,6 +484,9 @@ button {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: #ffffff;
+}
+.sub-button {
+  margin-top: 16px;
 }
 .subscription-button {
   min-width: 165px;
@@ -1036,7 +1037,9 @@ button {
     margin-right: 207px;
   }
   .subscription-form {
+    display: flex;
     flex-wrap: nowrap;
+    gap: 24px;
   }
   .footer {
     height: 466px;
@@ -1108,10 +1111,5 @@ button {
   .customers-list-item {
     width: calc((100% - 120px) / 6);
     height: 88px;
-  }
-  .footer > .container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
   }
 }
