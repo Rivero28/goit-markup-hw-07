@@ -1075,22 +1075,27 @@ button {
   }
   .footer-header {
     text-align: left;
+    margin-left: 0px;
   }
   .subscription {
     display: flex;
-    margin-right: 207px;
-    height: 80px;
-    min-width: 453px;
-    flex-direction: row;
+    max-height: 80px;
+    align-items: flex-start;
+    max-width: 453px;
+    flex-wrap: wrap;
   }
   .subscription-form {
     display: flex;
-    flex-wrap: nowrap;
     gap: 24px;
   }
   .subscription-input {
     width: 264px;
     color: #ffffff;
+  }
+  .sub-button {
+    display: flex;
+    margin-left: 24px;
+    margin-top: 40px;
   }
   .social-media-box {
     margin-right: 164px;
