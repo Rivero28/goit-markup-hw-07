@@ -1219,18 +1219,21 @@ button {
     align-items: center;
     gap: 24px;
     flex-direction: row;
+    height: auto;
   }
   .customers-list-item {
     min-width: calc((100% - 120px) / 6);
     height: 88px;
   }
-  .footer {
-    height: 466px;
+  .footer > .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
   }
   .footer-secondary {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-left: 108px;
+    justify-content: space-between;
   }
   .footer-link {
     text-align: left;
