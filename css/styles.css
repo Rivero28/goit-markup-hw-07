@@ -12,6 +12,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 .header {
@@ -966,11 +967,27 @@ button {
   .menu-toggle {
     display: none;
   }
+  .div-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    height: 70px;
+  }
+  .div-header .menu {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 24px 0;
+    display: flex;
+  }
   .navigation {
     display: flex;
     align-items: center;
   }
-
+  .nav-header {
+    display: flex;
+    align-items: center;
+  }
   .logo {
     margin-left: 16px;
     text-decoration: none;
@@ -983,6 +1000,9 @@ button {
     display: block;
     padding-top: 16px;
     padding-right: 16px;
+  }
+  .div-header .address-list {
+    display: block;
   }
   .secondary-list {
     display: grid;
@@ -1016,6 +1036,7 @@ button {
   }
   .customers-section {
     padding: 0;
+    margin-bottom: 96px;
   }
   .secondary-list-header {
     padding-top: 96px;
@@ -1023,7 +1044,20 @@ button {
   .customers-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 24px;
+    flex-direction: row;
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+  .customers-list-item {
+    min-width: calc((100% - 48px) / 3);
+  }
+  .footer {
+    height: 466px;
+  }
+  .footer-secondary {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 108px;
   }
   .footer-link {
     text-align: left;
@@ -1032,31 +1066,34 @@ button {
     text-align: left;
   }
   .subscription {
-    margin-left: 106px;
-    display: block;
+    display: flex;
     margin-right: 207px;
+    height: 80px;
+    min-width: 453px;
+    flex-direction: row;
   }
   .subscription-form {
     display: flex;
     flex-wrap: nowrap;
     gap: 24px;
   }
-  .footer {
-    height: 466px;
+  .subscription-input {
+    width: 264px;
+    color: #ffffff;
   }
   .social-media-box {
     margin-right: 164px;
+    margin-left: 0;
   }
   .main-list {
-    margin: 24px 109px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 96px;
   }
   .main-list-element {
     width: 264px;
     height: 428px;
-  }
-  .subscription-input {
-    width: 264px;
-    color: #ffffff;
   }
   .characteristics-list {
     display: grid;
@@ -1069,11 +1106,182 @@ button {
 }
 /*========DESKTOP=======*/
 @media screen and (min-width: 1158px) {
+  body {
+    font-family: "Roboto", sans-serif;
+    color: #434455;
+    background-color: #ffffff;
+  }
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .menu-container {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .header-wrap {
+    height: 72px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .div-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .div-header .menu {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 24px 0;
+    display: flex;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    margin-left: 16px;
+    text-decoration: none;
+  }
+  .address {
+    font-style: normal;
+    display: flex;
+    align-items: center;
+  }
+  .address-list {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 40px;
+  }
+  .div-header .address-list {
+    display: flex;
+  }
+  .secondary-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    display: flex;
+    list-style: none;
+  }
+  .icons-secondary {
+    display: none;
+  }
+  .secondary-list-section {
+    padding-top: 0;
+    padding-bottom: 120px;
+    display: flex;
+  }
+  .characteristics-list-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .characteristics-list-item-header {
+    padding: 0 0 0 24px;
+  }
+  .characteristics-list-item-description {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+  }
+  .fourth-section {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 0px;
+  }
+  .customers-section > .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .secondary-list-header {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2e2f42;
+    margin-bottom: 72px;
+  }
+  .customers-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-direction: row;
+  }
+  .customers-list-item {
+    min-width: calc((100% - 120px) / 6);
+    height: 88px;
+  }
+  .footer {
+    height: 466px;
+  }
+  .footer-secondary {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 108px;
+  }
+  .footer-link {
+    text-align: left;
+  }
+  .footer-header {
+    text-align: left;
+  }
+  .subscription {
+    display: flex;
+    margin-right: 207px;
+    height: 80px;
+    min-width: 453px;
+    flex-direction: row;
+  }
+  .subscription-form {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .subscription-input {
+    width: 264px;
+    color: #ffffff;
+  }
+  .social-media-box {
+    margin-right: 164px;
+    margin-left: 0;
+  }
+  .main-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 96px;
+  }
+  .main-list-element {
+    width: 264px;
+    height: 428px;
+  }
+  .characteristics-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .modal-window {
+    min-width: 408px;
+  }
   .characteristics-list {
     display: flex;
     justify-content: center;
     align-content: center;
     gap: 24px;
+    flex-direction: row;
   }
   .characteristics-list-item-header {
     font-weight: 500;
@@ -1093,6 +1301,9 @@ button {
     border-radius: 4px;
     margin-bottom: 8px;
   }
+  .icons-secondary {
+    display: flex;
+  }
   .main-list {
     display: flex;
     justify-content: center;
@@ -1101,15 +1312,5 @@ button {
   }
   .main-list-element {
     width: calc((100% - 72px) / 4);
-  }
-  .customers-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-  }
-  .customers-list-item {
-    width: calc((100% - 120px) / 6);
-    height: 88px;
   }
 }
