@@ -166,7 +166,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/dark-bg.jpg);
+    url(../images/Dark-bg.jpg);
   background-color: #2e2f42;
   background-repeat: no-repeat;
   background-position: center;
@@ -846,7 +846,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/dark-bgx2.jpg");
+      url("../images/Dark-bgx2.jpg");
   }
 }
 /*PORTFOLIO*/
@@ -1125,7 +1125,7 @@ button {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url("../images/dark-bgx2.jpg");
+        url("../images/Dark-bgx2.jpg");
     }
   }
 }
